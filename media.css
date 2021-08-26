@@ -165,6 +165,9 @@
   }
 }
 @media screen and (max-width: 450px) {
+   .site-content-wrapper.scaled {
+    transform: translateX(82%) scale(0.9);
+  }
   .timer {
     margin-right: -0.5rem;
   }
