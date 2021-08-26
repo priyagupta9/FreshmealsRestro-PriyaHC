@@ -56,6 +56,9 @@
 }
 
 @media screen and (max-width: 768px) {
+   .site-content-wrapper.scaled {
+    transform: translateX(86%) scale(0.9);
+  }
   .fcard2 {
     display: none;
   }
