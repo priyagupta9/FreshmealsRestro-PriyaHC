@@ -1,0 +1,190 @@
+@media screen and (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1152px;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .login article {
+    flex-direction: column;
+    align-items: center;
+  }
+  .login-yellow .login-img {
+    width: 130%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .login-yellow .login-img {
+    width: 150%;
+  }
+  .nav-trigger {
+    display: block;
+  }
+  header.topbar,
+  nav {
+    display: none;
+  }
+  header.hero {
+    padding-top: 3rem;
+  }
+  header.hero .hero-image img {
+    position: absolute;
+    right: -180px;
+    top: 80px;
+  }
+  .top-prod .slider-btn,
+  .fcard3 {
+    display: none;
+  }
+  .food-card {
+    width: 20rem;
+  }
+  .blog .news-wrapper {
+    flex-direction: column;
+    margin-bottom: -2rem;
+  }
+  .blog .news-wrapper .news-card {
+    margin-right: 0;
+    margin-bottom: 4rem;
+  }
+  footer .box .post-wrap > div {
+    width: calc(1 / 2 * 100% - (1 - 1 / 2) * 10px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .site-content-wrapper.scaled {
+    transform: translateX(86%) scale(0.9);
+  }
+  .fcard2 {
+    display: none;
+  }
+  .food-card {
+    width: 30rem;
+  }
+  .food-des .cart button {
+    position: relative;
+    width: 15rem;
+    height: 2rem;
+    padding-left: 0;
+  }
+  .food-des .cart button img {
+    left: 0;
+    position: absolute;
+  }
+  .about-meal .about-wrapper {
+    flex-direction: column;
+  }
+  .about-wrapper div:nth-child(3) {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .about-meal .about-wrapper img {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+  .service-wrapper {
+    flex-direction: column;
+    margin-bottom: -4rem;
+  }
+  .services .service-card:nth-child(1),
+  .service-card:nth-child(2) {
+    margin-right: 0px;
+  }
+  .services .service-card:nth-child(1) {
+    margin-top: 1rem;
+  }
+  .service-card {
+    margin-bottom: 6rem;
+  }
+  .timer div {
+    width: 100px;
+  }
+  .sub .sub-wrapper {
+    flex-direction: column;
+  }
+  .sub-wrapper img {
+    width: 100%;
+  }
+  .foot-wrap {
+    flex-direction: column;
+  }
+  .box {
+    text-align: left;
+    margin-bottom: 3rem;
+  }
+  .box:nth-child(3) h1,
+  .box li,
+  .box ul li a {
+    text-align: left;
+  }
+  .box:nth-child(3) > div {
+    display: block;
+  }
+  footer .box .post-wrap {
+    margin-right: 0px;
+  }
+  .fcard2 {
+    display: none;
+  }
+  .food-card {
+    width: 20rem;
+  }
+  .food-des .cart button {
+    width: 12rem;
+  }
+  .hero .hero-image {
+    z-index: 0;
+  }
+}
+@media screen and (max-width: 570px) {
+  .timer div {
+    width: 80px;
+  }
+  footer .container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  header.hero {
+    height: 500px;
+    margin-top: 1rem;
+  }
+  header.hero .hero-image {
+    right: -70px;
+    top: 40px;
+  }
+  section.contact {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 450px) {
+  .site-content-wrapper.scaled {
+    transform: translateX(82%) scale(0.9);
+  }
+  .timer {
+    margin-right: -0.5rem;
+  }
+  .timer div {
+    margin-right: 0.5rem;
+  }
+}
