@@ -127,3 +127,32 @@ function foot() {
     q = 0;
   }
 }
+
+
+
+// -----------------countdown timer-----------------------
+const countdown = () =>{
+  const futureDate = new Date("October 30, 2021 00:00:00").getTime();
+  const currentDate = new Date().getTime();
+  const gap = futureDate - currentDate;
+
+  //time in ms
+  const oneSec = 1000;
+  const oneMin = oneSec * 60;
+  const oneHour = oneMin * 60;
+  const oneDay = oneHour * 24;
+
+    //remaining time
+    const day = Math.floor(gap/oneDay);
+    const hour = Math.floor((gap % oneDay)/oneHour);
+    const min = Math.floor((gap % oneHour)/oneMin);
+    const sec = Math.floor((gap % oneMin)/oneSec);
+
+  document.querySelector(".days").textContent = day;
+  document.querySelector(".hours").textContent = hour;
+  document.querySelector(".mins").textContent = min;
+  document.querySelector(".secs").textContent = sec;
+
+}
+
+setInterval(countdown,1000);
