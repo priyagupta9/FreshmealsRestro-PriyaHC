@@ -156,3 +156,168 @@ const countdown = () =>{
 }
 
 setInterval(countdown,1000);
+
+//--------------add to cart(Heart Trail Animation)----------------
+const cartBoxs = document.querySelectorAll(".cartBox");
+
+cartBoxs.forEach((cartActive)=>{
+    const cartBtn = cartActive.querySelector(".addToCart");
+      cartBtn.addEventListener("click",(e)=>{
+        const heart = document.createElement("span");
+        heart.classList.add("heartTrail");
+        cartActive.appendChild(heart);
+      });
+  });
+
+
+//--------------------menu------------------------
+//items
+const menu = [
+  {
+    id:1,
+    title:"Malai Kofta",
+    category: "lunch",
+    price:140,
+    img: "./images/Malai_Kofta.jpg",
+  },
+  {
+    id:2,
+    title:"Shahi Paneer",
+    category: "lunch",
+    price:170,
+    img: "./images/shahi-paneer.jpg",
+  },
+  {
+    id:3,
+    title:"Pizza",
+    category: "lunch",
+    price:130,
+    img: "./images/Pizza.jpg",
+  },
+  {
+    id:4,
+    title:"Cranberry Juice",
+    category: "breakfast",
+    price:90,
+    img: "./images/cranberry.jpg",
+  },
+  {
+    id:5,
+    title:"Vada Pav",
+    category: "breakfast",
+    price:100,
+    img: "./images/Vada-Pav-500x500.jpg",
+  },
+  {
+    id:6,
+    title:"Aloo Dum",
+    category: "dinner",
+    price:120,
+    img: "./images/Banarasi-Aloo-Dum-Feature.jpg",
+  },
+  {
+    id:7,
+    title:"Brownie Ice cream",
+    category: "sweets",
+    price:120,
+    img: " ./images/brownie.jpg",
+  },
+  {
+    id:8,
+    title:"Idli Sambhar",
+    category: "breakfast",
+    price:170,
+    img: " ./images/idli.jpg",
+  },
+  {
+    id:9,
+    title:"Veg Noodles",
+    category: "lunch",
+    price:120,
+    img: " ./images/noodles.jpg",
+  },
+  {
+    id:10,
+    title:"Gulab Jamun",
+    category: "sweets",
+    price:35,
+    img: "./images/gulab-jamun.jpg",
+  },
+  {
+    id:11,
+    title:"Sambhar Vada",
+    category: "dinner",
+    price:100,
+    img: " ./images/sambhar-vada.jpg",
+  },
+  {
+    id:12,
+    title:"Kurkuri Bhindi",
+    category: "dinner",
+    price:110,
+    img: " ./images/Kurkuri-Bhindi-Recipe-Step-By-Step-Instructions.jpg",
+  },
+  
+];
+
+
+const menuDoc = document.querySelector(".menu");
+const menuBtns = document.querySelectorAll(".menu-btn");
+
+
+//load items
+window.addEventListener("DOMContentLoaded", function(){
+  displayMenuItems(menu);
+});
+
+//filter items
+menuBtns.forEach((btn)=>{
+  btn.addEventListener("click",(e)=>{
+    const categorySelected=e.currentTarget.dataset.id;
+    const menuCategory =menu.filter((menuItem)=>{
+    if(categorySelected ==menuItem.category){
+      return menuItem;
+    }
+  });
+  if(categorySelected==="all"){
+    displayMenuItems(menu);
+  }
+  else{
+    displayMenuItems(menuCategory);
+  }
+  });
+});
+
+
+function displayMenuItems(menuItems){
+  let displayMenu = menuItems.map(function(item){
+
+    return `<article class="menu-item">
+    <img src=${item.img} alt=${item.title} class="pic" />
+    <div class="menu-item-info">
+      <header>
+        <h4>${item.title}</h4>
+      </header>
+      <div class="food-des">
+      <div class="stars">
+      <img src="./icons/start-filled.svg" />
+      <img src="./icons/start-filled.svg" />
+      <img src="./icons/start-filled.svg" />
+      <img src="./icons/star-grey.svg" />
+      <img src="./icons/star-grey.svg" />
+      </div>
+        <div class="price">₹${item.price}</div>
+        <div class="cart">
+        <button class="cartBox">
+        <img src="./icons/cart.svg" />
+        <span class="addToCart">Add to cart</span>
+        </button>
+        </div>
+      </div>
+    </div>
+  </article>`;
+  });
+
+  displayMenu = displayMenu.join("");
+  menuDoc.innerHTML=displayMenu;
+}

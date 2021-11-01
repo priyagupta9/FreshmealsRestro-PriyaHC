@@ -29,6 +29,20 @@
   }
 }
 
+@media screen and (max-width: 600px) {
+  .menu-item{
+    flex-direction: column;
+    align-items: center;
+  margin-bottom: 5rem;
+  }
+  .menu-item-info {
+    margin-left: 0px;
+  }
+.menu-item-info header {
+  justify-content: center;
+}
+}
+
 @media screen and (max-width: 992px) {
   .login-yellow .login-img {
     width: 150%;
@@ -52,9 +66,7 @@
   .fcard3 {
     display: none;
   }
-  .food-card {
-    width: 20rem;
-  }
+ 
   .blog .news-wrapper {
     flex-direction: column;
     margin-bottom: -2rem;
@@ -76,9 +88,7 @@
   .fcard2 {
     display: none;
   }
-  .food-card {
-    width: 30rem;
-  }
+
   .food-des .cart button {
     position: relative;
     width: 15rem;
@@ -144,12 +154,7 @@
   footer .box .post-wrap {
     margin-right: 0px;
   }
-  .fcard2 {
-    display: none;
-  }
-  .food-card {
-    width: 20rem;
-  }
+
   .food-des .cart button {
     width: 12rem;
   }
@@ -157,6 +162,7 @@
     z-index: 0;
   }
 }
+
 @media screen and (max-width: 570px) {
   .timer div {
     width: 80px;
