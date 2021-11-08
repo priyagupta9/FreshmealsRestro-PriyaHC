@@ -1116,6 +1116,9 @@ main{
   color: white;
 }
 
+.shopNow{
+  color: rgb(146, 10, 10) !important; 
+}
 .menu {
   display: flex;
   justify-content: center;
