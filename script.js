@@ -132,7 +132,7 @@ function foot() {
 
 // -----------------countdown timer-----------------------
 const countdown = () =>{
-  const futureDate = new Date("October 30, 2021 00:00:00").getTime();
+  const futureDate = new Date("November 30, 2021 00:00:00").getTime();
   const currentDate = new Date().getTime();
   const gap = futureDate - currentDate;
 
