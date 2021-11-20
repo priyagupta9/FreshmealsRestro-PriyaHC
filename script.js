@@ -7,6 +7,12 @@ nav_trigger.addEventListener("click", function () {
   site_wrapper.classList.toggle("scaled");
 });
 
+const bgNav = document.querySelector(".bg-nav");
+bgNav.addEventListener("click",()=>{
+    console.log("ll");
+    site_wrapper.classList.remove("scaled");
+});
+
 const hero_more = document.getElementById("hero-more");
 const hero_btn = document.getElementById("hero-readbtn");
 var i = 0;
