@@ -136,7 +136,10 @@ body {
   box-shadow: 0 3px 10px 0 var(--secondary);
 }
 
-
+.nav-background .logo-sk{
+  height: 100px;
+  width: 200px;
+}
 
 .site-content {
   width: 100%;
